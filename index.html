@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Generador de Reporte Killer â€” AT&T Premium</title>
+<title>Generador de Reporte Killer — AT&T Premium</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -130,14 +130,14 @@
     font-size:10.5px; white-space:nowrap; letter-spacing:.3px;
   }
   .plan-tag::before{ font-size:9px; }
-  .p-AZ1{ background:#16233D; color:#8FB2FF; } .p-AZ1::before{ content:'â—'; opacity:.5; }
-  .p-AZ2{ background:#182B4D; color:#9DBCFF; } .p-AZ2::before{ content:'â—'; opacity:.75; }
-  .p-AZ3{ background:#1B345E; color:#AFC8FF; } .p-AZ3::before{ content:'â—'; opacity:1; }
-  .p-PLA{ background:linear-gradient(135deg,#3A414D,#232830); color:#D7DCE3; } .p-PLA::before{ content:'â—†'; }
-  .p-ORO{ background:linear-gradient(135deg,#4A3A14,#2C220C); color:#F0C368; } .p-ORO::before{ content:'â˜…'; }
-  .p-BLK{ background:#181818; color:#FF9C55; border:1px solid #3A2A17; } .p-BLK::before{ content:'â– '; }
-  .p-PLT{ background:linear-gradient(135deg,#3D4450,#22262D); color:#EDEFF3; } .p-PLT::before{ content:'â¬¥'; }
-  .p-DIA{ background:linear-gradient(135deg,#0F3A44,#0A2530); color:#7CE8F0; } .p-DIA::before{ content:'âœ¦'; }
+  .p-AZ1{ background:#16233D; color:#8FB2FF; } .p-AZ1::before{ content:'●'; opacity:.5; }
+  .p-AZ2{ background:#182B4D; color:#9DBCFF; } .p-AZ2::before{ content:'●'; opacity:.75; }
+  .p-AZ3{ background:#1B345E; color:#AFC8FF; } .p-AZ3::before{ content:'●'; opacity:1; }
+  .p-PLA{ background:linear-gradient(135deg,#3A414D,#232830); color:#D7DCE3; } .p-PLA::before{ content:'◆'; }
+  .p-ORO{ background:linear-gradient(135deg,#4A3A14,#2C220C); color:#F0C368; } .p-ORO::before{ content:'★'; }
+  .p-BLK{ background:#181818; color:#FF9C55; border:1px solid #3A2A17; } .p-BLK::before{ content:'■'; }
+  .p-PLT{ background:linear-gradient(135deg,#3D4450,#22262D); color:#EDEFF3; } .p-PLT::before{ content:'⬥'; }
+  .p-DIA{ background:linear-gradient(135deg,#0F3A44,#0A2530); color:#7CE8F0; } .p-DIA::before{ content:'✦'; }
   .comision { color:var(--gold); font-weight:700; font-family:var(--font-mono); }
   .seguro-name { color:var(--purple); font-size:11px; font-weight:600; }
   .empty {
@@ -297,7 +297,7 @@
   .ad-card-blue .ad-card-value { color:var(--ad-accent1); }
   .ad-card-pink .ad-card-value { color:var(--ad-accent2); }
 
-  /* ---- ComposiciÃ³n (layout, no color) ---- */
+  /* ---- Composición (layout, no color) ---- */
   .ad-comp-0 .ad-body { flex-direction:row; }
   .ad-comp-1 .ad-body { flex-direction:column-reverse; text-align:center; align-items:center; }
   .ad-comp-1 .ad-textcol { align-items:center; }
@@ -327,14 +327,14 @@
 </style>
 </head>
 <body>
-  <div class="kicker">AT&amp;T Premium Â· Sistema de cotizaciÃ³n</div>
+  <div class="kicker">AT&amp;T Premium · Sistema de cotización</div>
   <h1>GENERADOR DE <span>REPORTE KILLER</span></h1>
-  <div class="subtitle">Sube tu lista de precios (.xlsm/.xlsx) y tu inventario en PDF. El reporte cruza ambos archivos, aplica la regla de enganche/garantÃ­a sobre el valor factura de "Promociones AT&amp;T Premium", y te entrega el pago mÃ­nimo, comisiÃ³n y seguro sugerido por equipo.</div>
+  <div class="subtitle">Sube tu lista de precios (.xlsm/.xlsx) y tu inventario en PDF. El reporte cruza ambos archivos, aplica la regla de enganche/garantía sobre el valor factura de "Promociones AT&amp;T Premium", y te entrega el pago mínimo, comisión y seguro sugerido por equipo.</div>
 
   <div class="tabbar">
-    <button type="button" class="tab-btn active" id="tabbtn-reporte" onclick="switchTab('reporte')">ðŸ“Š Generar reporte</button>
-    <button type="button" class="tab-btn" id="tabbtn-vista" onclick="switchTab('vista')">ðŸ–¥ï¸ Vista de reporte</button>
-    <button type="button" class="tab-btn" id="tabbtn-publicidad" onclick="switchTab('publicidad')">ðŸ“¢ Publicidad</button>
+    <button type="button" class="tab-btn active" id="tabbtn-reporte" onclick="switchTab('reporte')">📊 Generar reporte</button>
+    <button type="button" class="tab-btn" id="tabbtn-vista" onclick="switchTab('vista')">🖥️ Vista de reporte</button>
+    <button type="button" class="tab-btn" id="tabbtn-publicidad" onclick="switchTab('publicidad')">📢 Publicidad</button>
   </div>
 
   <div class="tab-panel active" id="panel-reporte">
@@ -357,9 +357,9 @@
         <input type="file" id="pdfInput" accept=".pdf">
       </div>
     </div>
-    <div class="hint">Si el PDF es una imagen escaneada (no texto seleccionable), la extracciÃ³n automÃ¡tica no funcionarÃ¡ â€” en ese caso pega el texto del inventario abajo.</div>
+    <div class="hint">Si el PDF es una imagen escaneada (no texto seleccionable), la extracción automática no funcionará — en ese caso pega el texto del inventario abajo.</div>
     <div class="field" style="margin-top:10px;">
-      <label>O pega aquÃ­ el texto del inventario (opcional, si el PDF no se lee bien)</label>
+      <label>O pega aquí el texto del inventario (opcional, si el PDF no se lee bien)</label>
       <textarea id="pdfFallback" rows="4" placeholder="N.IP17256GN APPLE IPHONE 17 256GB NEGRO ATT 9" style="background:var(--panel-3);border:1px solid var(--border);border-radius:10px;color:var(--ink);padding:10px 12px;font-size:12px;font-family:var(--font-mono);"></textarea>
     </div>
   </div>
@@ -415,13 +415,13 @@
   </div>
 
   <div class="top-actions" id="downloadRow" style="display:none;">
-    <button onclick="switchTab('vista')">Ver reporte completo â†’</button>
+    <button onclick="switchTab('vista')">Ver reporte completo →</button>
   </div>
 
   <div class="footer-note" id="footerNote" style="display:none;">
-    <b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&amp;T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) â†’ <b>3 rentas del plan en garantÃ­a</b>. Si es â‰¥30% (descuento â‰¤70%) â†’ <b>enganche del 50%</b> del precio de ese plan.<br>
-    <b>ComisiÃ³n por equipo</b>: Azul1 $100 Â· Azul2 $180 Â· Azul3 $440 Â· Plata $530 Â· Oro $590 Â· Black $670 Â· Platino/Diamante $800.<br>
-    <b>Seguro sugerido</b> por rango de valor factura: $500â€“4,000â†’$99/mes Â· $4,001â€“6,000â†’$159/mes Â· $6,001â€“13,000â†’$219/mes Â· $13,001â€“38,000â†’$254/mes Â· $38,001â€“60,000â†’$279/mes.
+    <b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&amp;T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) → <b>3 rentas del plan en garantía</b>. Si es ≥30% (descuento ≤70%) → <b>enganche del 50%</b> del precio de ese plan.<br>
+    <b>Comisión por equipo</b>: Azul1 $100 · Azul2 $180 · Azul3 $440 · Plata $530 · Oro $590 · Black $670 · Platino/Diamante $800.<br>
+    <b>Seguro sugerido</b> por rango de valor factura: $500–4,000→$99/mes · $4,001–6,000→$159/mes · $6,001–13,000→$219/mes · $13,001–38,000→$254/mes · $38,001–60,000→$279/mes.
   </div>
 
   </div><!-- /panel-reporte -->
@@ -429,7 +429,7 @@
   <div class="tab-panel" id="panel-vista">
     <div class="panel">
       <h2>Vista completa del reporte</h2>
-      <div class="hint">Es el mismo contenido que genera el archivo descargable: la tabla de pago mÃ­nimo por modelo y la guÃ­a rÃ¡pida por pago inicial, para consultarla aquÃ­ mismo sin necesidad de descargar nada.</div>
+      <div class="hint">Es el mismo contenido que genera el archivo descargable: la tabla de pago mínimo por modelo y la guía rápida por pago inicial, para consultarla aquí mismo sin necesidad de descargar nada.</div>
     </div>
 
     <div class="panel" id="vistaFiltroPanel" style="display:none;">
@@ -446,11 +446,11 @@
       </div>
       <div class="row" style="margin-top:16px;">
         <div class="field">
-          <label>Pago inicial mÃ¡ximo (opcional)</label>
+          <label>Pago inicial máximo (opcional)</label>
           <input type="number" id="vistaPagoMax" placeholder="Ej. 3000" min="0" step="50" oninput="vistaFiltroUpdate()">
         </div>
         <div class="field">
-          <label>Mensualidad total mÃ¡xima (opcional)</label>
+          <label>Mensualidad total máxima (opcional)</label>
           <input type="number" id="vistaMensualidadMax" placeholder="Ej. 1200" min="0" step="50" oninput="vistaFiltroUpdate()">
         </div>
         <div class="field">
@@ -458,7 +458,7 @@
           <input type="text" id="vistaBuscar" placeholder="Ej. iPhone, Samsung..." oninput="vistaFiltroUpdate()">
         </div>
       </div>
-      <div class="hint">Deja plan y plazo en "todos/cualquiera" para ver el mejor plan automÃ¡tico por equipo (igual que hoy). Fija un plan y/o plazo especÃ­fico para ver el nÃºmero EXACTO que calcula la regla para esa combinaciÃ³n, sin aproximaciones â€” puedes combinarlo con un tope de pago inicial y/o de mensualidad.</div>
+      <div class="hint">Deja plan y plazo en "todos/cualquiera" para ver el mejor plan automático por equipo (igual que hoy). Fija un plan y/o plazo específico para ver el número EXACTO que calcula la regla para esa combinación, sin aproximaciones — puedes combinarlo con un tope de pago inicial y/o de mensualidad.</div>
       <div id="vistaFiltroResultsWrap"></div>
     </div>
 
@@ -472,12 +472,12 @@
     <div class="ad-editor">
 
       <div class="ad-rail">
-        <button type="button" class="ad-rail-btn active" data-panel="equipo" onclick="adSetRailPanel('equipo')" title="Dispositivo">ðŸ“±</button>
-        <button type="button" class="ad-rail-btn" data-panel="imagen" onclick="adSetRailPanel('imagen')" title="Imagen">ðŸ–¼ï¸</button>
-        <button type="button" class="ad-rail-btn" data-panel="plan" onclick="adSetRailPanel('plan')" title="Plan y plazo">ðŸ’³</button>
-        <button type="button" class="ad-rail-btn" data-panel="contacto" onclick="adSetRailPanel('contacto')" title="Contacto">ðŸ‘¤</button>
-        <button type="button" class="ad-rail-btn" data-panel="diseno" onclick="adSetRailPanel('diseno')" title="DiseÃ±o">ðŸŽ¨</button>
-        <button type="button" class="ad-rail-btn" data-panel="guardados" onclick="adSetRailPanel('guardados')" title="Mis diseÃ±os">ðŸ’¾</button>
+        <button type="button" class="ad-rail-btn active" data-panel="equipo" onclick="adSetRailPanel('equipo')" title="Dispositivo">📱</button>
+        <button type="button" class="ad-rail-btn" data-panel="imagen" onclick="adSetRailPanel('imagen')" title="Imagen">🖼️</button>
+        <button type="button" class="ad-rail-btn" data-panel="plan" onclick="adSetRailPanel('plan')" title="Plan y plazo">💳</button>
+        <button type="button" class="ad-rail-btn" data-panel="contacto" onclick="adSetRailPanel('contacto')" title="Contacto">👤</button>
+        <button type="button" class="ad-rail-btn" data-panel="diseno" onclick="adSetRailPanel('diseno')" title="Diseño">🎨</button>
+        <button type="button" class="ad-rail-btn" data-panel="guardados" onclick="adSetRailPanel('guardados')" title="Mis diseños">💾</button>
       </div>
 
       <div class="ad-panels">
@@ -487,12 +487,12 @@
           <div class="field">
             <label>Seleccionar del inventario</label>
             <select id="adEquipoSelect" onchange="adSeleccionarEquipo()">
-              <option value="">â€” Genera un reporte primero â€”</option>
+              <option value="">— Genera un reporte primero —</option>
             </select>
           </div>
           <div class="checkline" style="margin-top:12px;">
             <input type="checkbox" id="adCustomToggle" onchange="adToggleCustom()">
-            <label for="adCustomToggle">Agregar un equipo que no estÃ¡ en el inventario</label>
+            <label for="adCustomToggle">Agregar un equipo que no está en el inventario</label>
           </div>
           <div id="adCustomFields" style="display:none; margin-top:12px;">
             <div class="field">
@@ -504,7 +504,7 @@
               <input type="number" id="adCustomFactura" placeholder="Ej. 24999" oninput="adPreviewUpdate()">
             </div>
             <div class="field" style="margin-top:10px;">
-              <label>Precio de promociÃ³n del plan</label>
+              <label>Precio de promoción del plan</label>
               <input type="number" id="adCustomPromo" placeholder="Ej. 18999" oninput="adPreviewUpdate()">
             </div>
           </div>
@@ -517,14 +517,14 @@
             <input type="text" id="adImgUrl" placeholder="https://..." oninput="adSetImgUrl(this.value)">
           </div>
           <div style="margin-top:6px;">
-            <a href="#" onclick="adBuscarImagen(); return false;" style="font-size:11.5px;color:var(--blue);text-decoration:none;">ðŸ” Buscar imagen de este equipo en Google ImÃ¡genes</a>
+            <a href="#" onclick="adBuscarImagen(); return false;" style="font-size:11.5px;color:var(--blue);text-decoration:none;">🔍 Buscar imagen de este equipo en Google Imágenes</a>
           </div>
           <div class="field" style="margin-top:12px;">
             <label>O subir imagen desde tu equipo</label>
             <input type="file" id="adImgFile" accept="image/*" onchange="adImgFileChange(event)">
           </div>
-          <div class="hint">La imagen se ajusta completa dentro del espacio disponible (nunca se recorta) sin importar su proporciÃ³n original. Si no agregas imagen se muestra una silueta genÃ©rica. Si usas una URL externa y no aparece en el PNG descargado, es por seguridad del navegador (CORS) â€” en ese caso mejor sube el archivo.</div>
-          <div class="ad-warn" id="adImgWarn">âš  No se pudo cargar esa URL de imagen. Se muestra la silueta genÃ©rica mientras tanto.</div>
+          <div class="hint">La imagen se ajusta completa dentro del espacio disponible (nunca se recorta) sin importar su proporción original. Si no agregas imagen se muestra una silueta genérica. Si usas una URL externa y no aparece en el PNG descargado, es por seguridad del navegador (CORS) — en ese caso mejor sube el archivo.</div>
+          <div class="ad-warn" id="adImgWarn">⚠ No se pudo cargar esa URL de imagen. Se muestra la silueta genérica mientras tanto.</div>
           <div class="field" style="margin-top:12px;">
             <label>Color de silueta (si no hay imagen)</label>
             <select id="adColorEquipo" onchange="adPreviewUpdate()">
@@ -556,17 +556,17 @@
             <input type="text" id="adEjecutivo" value="Kari Neri" oninput="adPreviewUpdate()">
           </div>
           <div class="field" style="margin-top:10px;">
-            <label>TelÃ©fono</label>
+            <label>Teléfono</label>
             <input type="text" id="adTelefono" value="427 222 0016" oninput="adPreviewUpdate()">
           </div>
         </div>
 
         <div class="ad-panel-section" id="adPanel-diseno">
-          <div class="ad-panel-title">DiseÃ±o</div>
+          <div class="ad-panel-title">Diseño</div>
           <div class="field">
-            <label>ComposiciÃ³n</label>
+            <label>Composición</label>
             <div class="ad-tpl-picker" id="adCompPicker">
-              <button type="button" class="secondary ad-tpl-active" onclick="adSetComp(0)">ClÃ¡sico</button>
+              <button type="button" class="secondary ad-tpl-active" onclick="adSetComp(0)">Clásico</button>
               <button type="button" class="secondary" onclick="adSetComp(1)">Centrado</button>
               <button type="button" class="secondary" onclick="adSetComp(2)">Lateral</button>
             </div>
@@ -587,14 +587,14 @@
         </div>
 
         <div class="ad-panel-section" id="adPanel-guardados">
-          <div class="ad-panel-title">Mis diseÃ±os</div>
-          <div class="hint" style="margin-top:0; margin-bottom:14px;">Se guardan solo en este navegador/equipo. Si otra persona abre la herramienta desde su propio celular o computadora, ve su propia lista vacÃ­a â€” nunca se mezclan entre usuarios.</div>
+          <div class="ad-panel-title">Mis diseños</div>
+          <div class="hint" style="margin-top:0; margin-bottom:14px;">Se guardan solo en este navegador/equipo. Si otra persona abre la herramienta desde su propio celular o computadora, ve su propia lista vacía — nunca se mezclan entre usuarios.</div>
           <div class="field">
-            <label>Nombre del diseÃ±o</label>
+            <label>Nombre del diseño</label>
             <input type="text" id="adSaveName" placeholder="Ej. iPhone 17 - promo julio">
           </div>
           <div class="top-actions" style="margin:14px 0 18px;">
-            <button type="button" onclick="adGuardarDiseno()">ðŸ’¾ Guardar diseÃ±o actual</button>
+            <button type="button" onclick="adGuardarDiseno()">💾 Guardar diseño actual</button>
           </div>
           <div id="adSavedList"></div>
         </div>
@@ -604,7 +604,7 @@
       <div class="ad-stage-col">
         <div class="ad-stage-toolbar">
           <div class="ad-zoom-controls">
-            <button type="button" onclick="adZoom(-10)">âˆ’</button>
+            <button type="button" onclick="adZoom(-10)">−</button>
             <span class="ad-zoom-label" id="adZoomLabel">100%</span>
             <button type="button" onclick="adZoom(10)">+</button>
           </div>
@@ -623,19 +623,19 @@
               <div class="ad-body">
                 <div class="ad-textcol">
                   <div class="ad-h1" contenteditable="true" spellcheck="false" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">LO NUEVO</div>
-                  <div class="ad-h2" contenteditable="true" spellcheck="false" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">YA ESTÃ AQUÃ</div>
+                  <div class="ad-h2" contenteditable="true" spellcheck="false" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">YA ESTÁ AQUÍ</div>
                   <div class="ad-rule"></div>
                   <div class="ad-model" id="adModelName">Selecciona un equipo</div>
                   <span class="ad-plan-badge" id="adPlanBadge">Selecciona equipo y plan</span>
                   <div class="ad-cards">
                     <div class="ad-card ad-card-blue">
                       <div class="ad-card-label">DESDE</div>
-                      <div class="ad-card-value"><span class="ad-currency">$</span><span id="adMensualidad">â€”</span></div>
+                      <div class="ad-card-value"><span class="ad-currency">$</span><span id="adMensualidad">—</span></div>
                       <div class="ad-unit">AL MES</div>
                     </div>
                     <div class="ad-card ad-card-pink">
                       <div class="ad-card-label">PAGO INICIAL DESDE</div>
-                      <div class="ad-card-value"><span class="ad-currency">$</span><span id="adPagoInicial">â€”</span></div>
+                      <div class="ad-card-value"><span class="ad-currency">$</span><span id="adPagoInicial">—</span></div>
                       <div class="ad-unit">PESOS</div>
                     </div>
                   </div>
@@ -644,19 +644,19 @@
               </div>
               <div>
                 <div class="ad-contact">
-                  <div class="ad-avatar">ðŸ‘¤</div>
+                  <div class="ad-avatar">👤</div>
                   <div>
                     <div class="ad-contact-role">Ejecutiva</div>
                     <div class="ad-contact-name" id="adNombreEjecutivo">Kari Neri</div>
-                    <div class="ad-contact-phone">ðŸ“ž Cel. <span id="adTelefonoOut">427 222 0016</span></div>
+                    <div class="ad-contact-phone">📞 Cel. <span id="adTelefonoOut">427 222 0016</span></div>
                   </div>
                 </div>
-                <div class="ad-disclaimer" contenteditable="true" spellcheck="false" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">Sujeto a aprobaciÃ³n de crÃ©dito.</div>
+                <div class="ad-disclaimer" contenteditable="true" spellcheck="false" onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}">Sujeto a aprobación de crédito.</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="hint" style="text-align:center;">Haz clic en el tÃ­tulo o el aviso legal del anuncio para editarlos directamente. Los demÃ¡s datos se cambian desde el panel de la izquierda.</div>
+        <div class="hint" style="text-align:center;">Haz clic en el título o el aviso legal del anuncio para editarlos directamente. Los demás datos se cambian desde el panel de la izquierda.</div>
       </div>
 
     </div>
@@ -727,9 +727,9 @@ async function parseExcel(file){
   const mainName = names.find(n => normText(n) === 'AT&T PREMIUM');
   const promoName = names.find(n => normText(n) === 'PROMOCIONES AT&T PREMIUM');
 
-  if (!mainName) throw new Error('No encontrÃ© una hoja llamada exactamente "AT&T Premium".');
-  if (!promoName) throw new Error('No encontrÃ© una hoja llamada exactamente "Promociones AT&T Premium".');
-  log('Hoja principal: "' + mainName + '" Â· Hoja de promociones: "' + promoName + '"', 'ok');
+  if (!mainName) throw new Error('No encontré una hoja llamada exactamente "AT&T Premium".');
+  if (!promoName) throw new Error('No encontré una hoja llamada exactamente "Promociones AT&T Premium".');
+  log('Hoja principal: "' + mainName + '" · Hoja de promociones: "' + promoName + '"', 'ok');
 
   const mainArr = XLSX.utils.sheet_to_json(wb.Sheets[mainName], {header:1, raw:true, defval:null});
   const promoArr = XLSX.utils.sheet_to_json(wb.Sheets[promoName], {header:1, raw:true, defval:null});
@@ -749,7 +749,7 @@ async function parseExcel(file){
   const mainPlanGroups = buildPlanGroups(mainArr[mainHeaderRow]);
   const mainFoundPlans = Object.keys(mainPlanGroups).length;
   if (mainFoundPlans < 8){
-    log('Solo detectÃ© ' + mainFoundPlans + ' de 8 planes en la hoja principal (para el respaldo por SKU).', 'warn');
+    log('Solo detecté ' + mainFoundPlans + ' de 8 planes en la hoja principal (para el respaldo por SKU).', 'warn');
   }
   for (let r=mainHeaderRow+1; r<mainArr.length; r++){
     const row = mainArr[r];
@@ -781,7 +781,7 @@ async function parseExcel(file){
   const planGroups = buildPlanGroups(promoArr[promoHeaderRow]);
   const foundPlans = Object.keys(planGroups).length;
   if (foundPlans < 8){
-    log('Solo detectÃ© ' + foundPlans + ' de 8 planes en la hoja de promociones (esperaba Azul1/2/3, Plata, Oro, Black, Platino, Diamante). RevisarÃ© con los que encontrÃ©.', 'warn');
+    log('Solo detecté ' + foundPlans + ' de 8 planes en la hoja de promociones (esperaba Azul1/2/3, Plata, Oro, Black, Platino, Diamante). Revisaré con los que encontré.', 'warn');
   } else {
     log('8 planes detectados correctamente en la hoja de promociones.', 'ok');
   }
@@ -802,7 +802,7 @@ async function parseExcel(file){
     });
     promoByName[key] = { factura, plans, rawEquipo: equipo };
   }
-  log('Equipos con datos de promociÃ³n: ' + Object.keys(promoByName).length);
+  log('Equipos con datos de promoción: ' + Object.keys(promoByName).length);
 
   return { mainRows, promoByName };
 }
@@ -845,8 +845,8 @@ function parseInventoryLines(lines){
 }
 
 function seguroFor(factura){
-  if (factura <= 4000) return {n:'BÃ¡sico', prima:99};
-  if (factura <= 6000) return {n:'EstÃ¡ndar', prima:159};
+  if (factura <= 4000) return {n:'Básico', prima:99};
+  if (factura <= 6000) return {n:'Estándar', prima:159};
   if (factura <= 13000) return {n:'Plus', prima:219};
   if (factura <= 38000) return {n:'Premium', prima:254};
   return {n:'Premium Max', prima:279};
@@ -890,9 +890,9 @@ async function procesar(){
       log('Leyendo PDF...');
       try {
         lines = await parsePDF(pdfFile);
-        log('LÃ­neas de texto extraÃ­das del PDF: ' + lines.length);
+        log('Líneas de texto extraídas del PDF: ' + lines.length);
       } catch(e){
-        log('No pude leer el PDF automÃ¡ticamente (' + e.message + '). Usa el campo de texto de respaldo.', 'err');
+        log('No pude leer el PDF automáticamente (' + e.message + '). Usa el campo de texto de respaldo.', 'err');
       }
     }
     if (fallbackText){
@@ -918,7 +918,7 @@ async function procesar(){
     inventario.forEach(inv => {
       const mrow = mainRows[inv.sku];
       if (!mrow){
-        sinFilaExcel.push(inv.sku + ' â€” ' + inv.nombre);
+        sinFilaExcel.push(inv.sku + ' — ' + inv.nombre);
         return;
       }
       const modeloKey = normText(mrow.modelo);
@@ -944,9 +944,9 @@ async function procesar(){
         factura = mrow.contadoMain;
         plans = mrow.plans;
         fuente = 'AT&T Premium (respaldo por SKU)';
-        usadosRespaldo.push(inv.sku + ' â€” ' + (mrow.nombre || mrow.modelo));
+        usadosRespaldo.push(inv.sku + ' — ' + (mrow.nombre || mrow.modelo));
       } else {
-        sinDatos.push(inv.sku + ' â€” ' + (mrow.nombre || mrow.modelo));
+        sinDatos.push(inv.sku + ' — ' + (mrow.nombre || mrow.modelo));
         return;
       }
 
@@ -966,18 +966,18 @@ async function procesar(){
     });
 
     if (sinFilaExcel.length){
-      log(sinFilaExcel.length + ' equipos del inventario no se encontraron por SKU en la lista de precios: ' + sinFilaExcel.slice(0,8).join(' Â· ') + (sinFilaExcel.length>8?' â€¦':''), 'warn');
+      log(sinFilaExcel.length + ' equipos del inventario no se encontraron por SKU en la lista de precios: ' + sinFilaExcel.slice(0,8).join(' · ') + (sinFilaExcel.length>8?' …':''), 'warn');
     }
     if (usadosRespaldo.length){
-      log(usadosRespaldo.length + ' equipos no tenÃ­an datos en "Promociones AT&T Premium" y se calcularon con la hoja "AT&T Premium" (respaldo por SKU): ' + usadosRespaldo.slice(0,8).join(' Â· ') + (usadosRespaldo.length>8?' â€¦':''), 'warn');
+      log(usadosRespaldo.length + ' equipos no tenían datos en "Promociones AT&T Premium" y se calcularon con la hoja "AT&T Premium" (respaldo por SKU): ' + usadosRespaldo.slice(0,8).join(' · ') + (usadosRespaldo.length>8?' …':''), 'warn');
     }
     if (sinDatos.length){
-      log(sinDatos.length + ' equipos no tienen datos de promociÃ³n en ninguna de las dos hojas: ' + sinDatos.slice(0,8).join(' Â· ') + (sinDatos.length>8?' â€¦':''), 'warn');
+      log(sinDatos.length + ' equipos no tienen datos de promoción en ninguna de las dos hojas: ' + sinDatos.slice(0,8).join(' · ') + (sinDatos.length>8?' …':''), 'warn');
     }
     log('Equipos con reporte completo: ' + Object.keys(equipos).length, 'ok');
 
     if (Object.keys(equipos).length === 0){
-      log('No logrÃ© cruzar ningÃºn equipo. Revisa que subiste el archivo correcto de lista de precios.', 'err');
+      log('No logré cruzar ningún equipo. Revisa que subiste el archivo correcto de lista de precios.', 'err');
       document.getElementById('processBtn').disabled = false;
       document.getElementById('processBtn').textContent = 'Generar reporte';
       return;
@@ -1006,7 +1006,7 @@ function computeCombo(sku, code, term, promo){
   const pct = descuento / factura;
   let concepto, pago, financiado;
   if (pct > 0.70){
-    concepto = '3 RENTAS EN GARANTÃA';
+    concepto = '3 RENTAS EN GARANTÍA';
     pago = Math.round(plan.arpu*3*100)/100;
     financiado = promo;
   } else {
@@ -1034,12 +1034,12 @@ function buildTablaHTML(rows, titleText, emptyMsg){
     html += '<div class="empty">' + emptyMsg + '</div>';
     return html;
   }
-  html += '<table><thead><tr><th>Marca</th><th>Equipo</th><th>Valor Factura</th><th>Precio PromociÃ³n</th><th>% Descuento</th><th>Plan / Plazo</th><th>Pago MÃ­nimo</th><th>ComisiÃ³n Equipo</th><th>Seguro sugerido</th><th>Existencias</th><th>Fuente</th></tr></thead><tbody>';
+  html += '<table><thead><tr><th>Marca</th><th>Equipo</th><th>Valor Factura</th><th>Precio Promoción</th><th>% Descuento</th><th>Plan / Plazo</th><th>Pago Mínimo</th><th>Comisión Equipo</th><th>Seguro sugerido</th><th>Existencias</th><th>Fuente</th></tr></thead><tbody>';
   rows.forEach(r => {
     const conceptoClass = r.concepto.includes('RENTA') ? 'garantia' : 'enganche';
     const fuenteShort = r.fuente && r.fuente.includes('respaldo') ? 'AT&T Premium<br><span class="diff">(respaldo)</span>' : 'Promociones';
     html += `<tr>
-      <td>${r.marca || 'â€”'}</td>
+      <td>${r.marca || '—'}</td>
       <td class="modelo">${r.nombre}</td>
       <td class="num">${money(r.factura)}</td>
       <td class="num promo">${money(r.promo)}</td>
@@ -1083,7 +1083,7 @@ function renderReporte(data, targetId){
     rows = rows.filter(r => (r.marca||'').trim() === selectedBrand);
   }
 
-  const title = 'Pago mÃ­nimo por modelo' + (selectedBrand ? ' â€” ' + selectedBrand : '') + ' (ordenado de menor a mayor)';
+  const title = 'Pago mínimo por modelo' + (selectedBrand ? ' — ' + selectedBrand : '') + ' (ordenado de menor a mayor)';
   document.getElementById(targetId).innerHTML = buildTablaHTML(rows, title, 'No hay equipos de esa marca en el inventario cruzado.');
 }
 
@@ -1104,7 +1104,7 @@ function simular(){
 
   let all = DATASET.combos.map(c => computeCombo(c[0], c[1], c[2], c[3]));
   if (searchTerm) all = all.filter(r => r.nombre.toUpperCase().includes(searchTerm));
-  if (all.length === 0){ wrap.innerHTML = '<div class="empty">No encontrÃ© equipos que coincidan.</div>'; return; }
+  if (all.length === 0){ wrap.innerHTML = '<div class="empty">No encontré equipos que coincidan.</div>'; return; }
 
   const metricOf = r => mode === 'pago' ? r.pago : r.mensualidadTotal;
   all.forEach(r => { r.diff = metricOf(r) - target; });
@@ -1146,13 +1146,13 @@ function simular(){
   function renderGroupTable(title, cls, groups, dentroFlag){
     if (!groups.length) return '';
     let out = `<div class="${cls}">${title}</div>`;
-    out += `<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>${metricLabel}</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>Alternativas</th><th>ComisiÃ³n</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>`;
+    out += `<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>${metricLabel}</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>Alternativas</th><th>Comisión</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>`;
     groups.forEach(g => {
       const r = g.main;
-      const altLabel = g.alternativas.map(a => `${a.planName} ${fmtMetricAlt(a)}`).join(' Â· ');
+      const altLabel = g.alternativas.map(a => `${a.planName} ${fmtMetricAlt(a)}`).join(' · ');
       out += `<tr>
         <td class="modelo">${r.nombre}</td>
-        <td>${dentroFlag?'â˜… ':''}<span class="plan-tag p-${r.planCode}">${r.planName}</span><br><span class="diff">${r.term} MESES</span></td>
+        <td>${dentroFlag?'★ ':''}<span class="plan-tag p-${r.planCode}">${r.planName}</span><br><span class="diff">${r.term} MESES</span></td>
         <td class="num pago ${dentroFlag?'enganche':'garantia'}">${fmtMetric(r)}</td>
         <td class="num">${money2(r.pago)}</td>
         <td class="num">${money(r.mensualidadTotal)}</td>
@@ -1197,14 +1197,14 @@ function generarGuiaEstatica(dataset){
     return groups.slice(0, 6);
   }
 
-  let html = '<div class="section-title">GuÃ­a rÃ¡pida por pago inicial (sin necesidad de JavaScript)</div>';
-  html += '<div class="hint" style="max-width:1100px;margin:0 auto 14px;">Esta secciÃ³n funciona incluso en el visor rÃ¡pido del iPhone. Muestra, para montos redondos de pago inicial, los equipos con el plan de mayor ARPU que siguen cabiendo en ese monto. Para un monto exacto o para buscar por mensualidad, usa el simulador interactivo (necesita abrirse en Safari/Chrome).</div>';
+  let html = '<div class="section-title">Guía rápida por pago inicial (sin necesidad de JavaScript)</div>';
+  html += '<div class="hint" style="max-width:1100px;margin:0 auto 14px;">Esta sección funciona incluso en el visor rápido del iPhone. Muestra, para montos redondos de pago inicial, los equipos con el plan de mayor ARPU que siguen cabiendo en ese monto. Para un monto exacto o para buscar por mensualidad, usa el simulador interactivo (necesita abrirse en Safari/Chrome).</div>';
 
   checkpoints.forEach(cp => {
     const sugerencias = suggestFor(cp);
     if (!sugerencias.length) return;
     html += `<div class="section-title alt">Con ${money(cp)} de pago inicial</div>`;
-    html += '<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>ComisiÃ³n</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>';
+    html += '<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>Comisión</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>';
     sugerencias.forEach(r => {
       html += `<tr>
         <td class="modelo">${r.nombre}</td>
@@ -1238,8 +1238,8 @@ const PLANES = {
   PLT:{n:'Platino',arpu:1035,com:800}, DIA:{n:'Diamante',arpu:1300,com:800},
 };
 function seguroFor(factura){
-  if (factura <= 4000) return {n:'BÃ¡sico', prima:99};
-  if (factura <= 6000) return {n:'EstÃ¡ndar', prima:159};
+  if (factura <= 4000) return {n:'Básico', prima:99};
+  if (factura <= 6000) return {n:'Estándar', prima:159};
   if (factura <= 13000) return {n:'Plus', prima:219};
   if (factura <= 38000) return {n:'Premium', prima:254};
   return {n:'Premium Max', prima:279};
@@ -1254,7 +1254,7 @@ function computeCombo(sku, code, term, promo){
   const pct = descuento / factura;
   let concepto, pago, financiado;
   if (pct > 0.70){
-    concepto = '3 RENTAS EN GARANTÃA'; pago = Math.round(plan.arpu*3*100)/100; financiado = promo;
+    concepto = '3 RENTAS EN GARANTÍA'; pago = Math.round(plan.arpu*3*100)/100; financiado = promo;
   } else {
     concepto = 'ENGANCHE 50%'; pago = Math.round(promo*0.5*100)/100; financiado = promo - pago;
   }
@@ -1275,16 +1275,16 @@ function renderReporte(){
   let rows = Object.values(bySku).sort((a,b) => a.pago - b.pago);
   const selectedBrand = document.getElementById('brandSelect').value;
   if (selectedBrand) rows = rows.filter(r => (r.marca||'').trim() === selectedBrand);
-  let html = '<div class="section-title">Pago mÃ­nimo por modelo' + (selectedBrand ? ' â€” ' + selectedBrand : '') + ' (ordenado de menor a mayor)</div>';
+  let html = '<div class="section-title">Pago mínimo por modelo' + (selectedBrand ? ' — ' + selectedBrand : '') + ' (ordenado de menor a mayor)</div>';
   if (rows.length === 0){
     html += '<div class="empty">No hay equipos de esa marca.</div>';
     document.getElementById('resultsWrap').innerHTML = html; return;
   }
-  html += '<table><thead><tr><th>Marca</th><th>Equipo</th><th>Valor Factura</th><th>Precio PromociÃ³n</th><th>% Descuento</th><th>Plan / Plazo</th><th>Pago MÃ­nimo</th><th>ComisiÃ³n Equipo</th><th>Seguro sugerido</th><th>Existencias</th><th>Fuente</th></tr></thead><tbody>';
+  html += '<table><thead><tr><th>Marca</th><th>Equipo</th><th>Valor Factura</th><th>Precio Promoción</th><th>% Descuento</th><th>Plan / Plazo</th><th>Pago Mínimo</th><th>Comisión Equipo</th><th>Seguro sugerido</th><th>Existencias</th><th>Fuente</th></tr></thead><tbody>';
   rows.forEach(r => {
     const conceptoClass = r.concepto.includes('RENTA') ? 'garantia' : 'enganche';
     const fuenteShort = r.fuente && r.fuente.includes('respaldo') ? 'AT&T Premium<br><span class="diff">(respaldo)</span>' : 'Promociones';
-    html += '<tr><td>'+(r.marca||'â€”')+'</td><td class="modelo">'+r.nombre+'</td><td class="num">'+money(r.factura)+'</td>'
+    html += '<tr><td>'+(r.marca||'—')+'</td><td class="modelo">'+r.nombre+'</td><td class="num">'+money(r.factura)+'</td>'
       + '<td class="num promo">'+money(r.promo)+'</td><td class="num desc">'+r.pct+'%</td>'
       + '<td><span class="plan-tag p-'+r.planCode+'">'+r.planName+'</span><br><span class="diff">'+r.term+' MESES</span></td>'
       + '<td class="num pago '+conceptoClass+'">'+money2(r.pago)+'<br><span class="diff">'+r.concepto+'</span></td>'
@@ -1307,7 +1307,7 @@ function simular(){
   if (isNaN(target)){ wrap.innerHTML = '<div class="empty">Ingresa un monto.</div>'; return; }
   let all = DATASET.combos.map(c => computeCombo(c[0], c[1], c[2], c[3]));
   if (searchTerm) all = all.filter(r => r.nombre.toUpperCase().includes(searchTerm));
-  if (all.length === 0){ wrap.innerHTML = '<div class="empty">No encontrÃ© equipos que coincidan.</div>'; return; }
+  if (all.length === 0){ wrap.innerHTML = '<div class="empty">No encontré equipos que coincidan.</div>'; return; }
   const metricOf = r => mode === 'pago' ? r.pago : r.mensualidadTotal;
   all.forEach(r => { r.diff = metricOf(r) - target; });
   const bySku = {};
@@ -1343,12 +1343,12 @@ function simular(){
   function renderGroupTable(title, cls, groups, dentroFlag){
     if (!groups.length) return '';
     let out = '<div class="'+cls+'">'+title+'</div>';
-    out += '<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>'+metricLabel+'</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>Alternativas</th><th>ComisiÃ³n</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>';
+    out += '<table><thead><tr><th>Equipo</th><th>Plan / Plazo</th><th>'+metricLabel+'</th><th>Pago Inicial</th><th>Mensualidad Total</th><th>Alternativas</th><th>Comisión</th><th>Seguro</th><th>Existencias</th></tr></thead><tbody>';
     groups.forEach(g => {
       const r = g.main;
-      const altLabel = g.alternativas.map(a => a.planName + ' ' + fmtMetric(a)).join(' Â· ');
+      const altLabel = g.alternativas.map(a => a.planName + ' ' + fmtMetric(a)).join(' · ');
       out += '<tr><td class="modelo">'+r.nombre+'</td>'
-        + '<td>'+(dentroFlag?'â˜… ':'')+'<span class="plan-tag p-'+r.planCode+'">'+r.planName+'</span><br><span class="diff">'+r.term+' MESES</span></td>'
+        + '<td>'+(dentroFlag?'★ ':'')+'<span class="plan-tag p-'+r.planCode+'">'+r.planName+'</span><br><span class="diff">'+r.term+' MESES</span></td>'
         + '<td class="num pago '+(dentroFlag?'enganche':'garantia')+'">'+fmtMetric(r)+'</td>'
         + '<td class="num">'+money2(r.pago)+'</td><td class="num">'+money(r.mensualidadTotal)+'</td>'
         + '<td><span class="diff">'+altLabel+'</span></td>'
@@ -1371,13 +1371,13 @@ renderReporte();
   <title>Reporte Killer AT&T Premium</title>
   <style>${styleCss}</style>
   </head><body>
-  <div class="kicker">AT&T Premium Â· Sistema de cotizaciÃ³n</div>
+  <div class="kicker">AT&T Premium · Sistema de cotización</div>
   <h1><span>REPORTE KILLER</span></h1>
   <div class="subtitle">Generado el ${new Date().toLocaleDateString('es-MX')}</div>
 
   <noscript>
     <div class="warn" style="max-width:1100px;margin:0 auto 14px;background:var(--panel);border:1px solid var(--gold);color:var(--gold);font-family:var(--font-mono);font-size:12px;padding:12px 16px;border-radius:10px;">
-      âš  La tabla principal y la guÃ­a rÃ¡pida por pago inicial se ven sin problema aquÃ­. Solo el simulador con monto exacto (al final del documento) necesita JavaScript â€” Ã¡brelo en Safari o Chrome para usar esa parte.
+      ⚠ La tabla principal y la guía rápida por pago inicial se ven sin problema aquí. Solo el simulador con monto exacto (al final del documento) necesita JavaScript — ábrelo en Safari o Chrome para usar esa parte.
     </div>
   </noscript>
 
@@ -1425,9 +1425,9 @@ renderReporte();
   </div>
 
   <div class="footer-note">
-    <b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&amp;T Premium", con respaldo por SKU en "AT&amp;T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) â†’ <b>3 rentas del plan en garantÃ­a</b>. Si es â‰¥30% (descuento â‰¤70%) â†’ <b>enganche del 50%</b> del precio de ese plan.<br>
-    <b>ComisiÃ³n por equipo</b>: Azul1 $100 Â· Azul2 $180 Â· Azul3 $440 Â· Plata $530 Â· Oro $590 Â· Black $670 Â· Platino/Diamante $800.<br>
-    <b>Seguro sugerido</b> por rango de valor factura: $500â€“4,000â†’$99/mes Â· $4,001â€“6,000â†’$159/mes Â· $6,001â€“13,000â†’$219/mes Â· $13,001â€“38,000â†’$254/mes Â· $38,001â€“60,000â†’$279/mes.
+    <b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&amp;T Premium", con respaldo por SKU en "AT&amp;T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) → <b>3 rentas del plan en garantía</b>. Si es ≥30% (descuento ≤70%) → <b>enganche del 50%</b> del precio de ese plan.<br>
+    <b>Comisión por equipo</b>: Azul1 $100 · Azul2 $180 · Azul3 $440 · Plata $530 · Oro $590 · Black $670 · Platino/Diamante $800.<br>
+    <b>Seguro sugerido</b> por rango de valor factura: $500–4,000→$99/mes · $4,001–6,000→$159/mes · $6,001–13,000→$219/mes · $13,001–38,000→$254/mes · $38,001–60,000→$279/mes.
   </div>
 
   <script>${embeddedScript}<\/script>
@@ -1459,16 +1459,16 @@ function renderVistaReporte(){
   const wrap = document.getElementById('vistaWrap');
   const dlRow = document.getElementById('vistaDownloadRow');
   if (!DATASET){
-    wrap.innerHTML = '<div class="empty">AÃºn no has generado un reporte. Ve a la pestaÃ±a "Generar reporte", sube tus archivos y genera el reporte primero.</div>';
+    wrap.innerHTML = '<div class="empty">Aún no has generado un reporte. Ve a la pestaña "Generar reporte", sube tus archivos y genera el reporte primero.</div>';
     dlRow.style.display = 'none';
     return;
   }
   dlRow.style.display = 'flex';
   wrap.innerHTML = '<div id="vistaResultsWrap"></div><div id="vistaGuiaWrap"></div>'
     + '<div class="footer-note">'
-    + '<b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&T Premium", con respaldo por SKU en "AT&T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) â†’ <b>3 rentas del plan en garantÃ­a</b>. Si es â‰¥30% (descuento â‰¤70%) â†’ <b>enganche del 50%</b> del precio de ese plan.<br>'
-    + '<b>ComisiÃ³n por equipo</b>: Azul1 $100 Â· Azul2 $180 Â· Azul3 $440 Â· Plata $530 Â· Oro $590 Â· Black $670 Â· Platino/Diamante $800.<br>'
-    + '<b>Seguro sugerido</b> por rango de valor factura: $500â€“4,000â†’$99/mes Â· $4,001â€“6,000â†’$159/mes Â· $6,001â€“13,000â†’$219/mes Â· $13,001â€“38,000â†’$254/mes Â· $38,001â€“60,000â†’$279/mes.'
+    + '<b>Regla aplicada:</b> Valor factura = Precio de Contado (hoja "Promociones AT&T Premium", con respaldo por SKU en "AT&T Premium"). Si el precio del plan es menor al 30% del valor factura (descuento &gt;70%) → <b>3 rentas del plan en garantía</b>. Si es ≥30% (descuento ≤70%) → <b>enganche del 50%</b> del precio de ese plan.<br>'
+    + '<b>Comisión por equipo</b>: Azul1 $100 · Azul2 $180 · Azul3 $440 · Plata $530 · Oro $590 · Black $670 · Platino/Diamante $800.<br>'
+    + '<b>Seguro sugerido</b> por rango de valor factura: $500–4,000→$99/mes · $4,001–6,000→$159/mes · $6,001–13,000→$219/mes · $13,001–38,000→$254/mes · $38,001–60,000→$279/mes.'
     + '</div>';
   renderReporte(DATASET, 'vistaResultsWrap');
   document.getElementById('vistaGuiaWrap').innerHTML = generarGuiaEstatica(DATASET);
@@ -1504,11 +1504,11 @@ function vistaFiltroUpdate(){
   const partes = [];
   if (planCode) partes.push(PLANES[planCode].n);
   if (term) partes.push(term + ' meses');
-  if (isNum(pagoMax)) partes.push('pago inicial â‰¤ ' + money(pagoMax));
-  if (isNum(mensMax)) partes.push('mensualidad â‰¤ ' + money(mensMax));
-  const title = 'Resultado del filtro' + (partes.length ? ' â€” ' + partes.join(' Â· ') : ' (todos los planes/plazos)');
+  if (isNum(pagoMax)) partes.push('pago inicial ≤ ' + money(pagoMax));
+  if (isNum(mensMax)) partes.push('mensualidad ≤ ' + money(mensMax));
+  const title = 'Resultado del filtro' + (partes.length ? ' — ' + partes.join(' · ') : ' (todos los planes/plazos)');
 
-  document.getElementById('vistaFiltroResultsWrap').innerHTML = buildTablaHTML(rows, title, 'NingÃºn equipo cumple esa combinaciÃ³n de plan/plazo/monto.');
+  document.getElementById('vistaFiltroResultsWrap').innerHTML = buildTablaHTML(rows, title, 'Ningún equipo cumple esa combinación de plan/plazo/monto.');
 }
 
 /* ================== PUBLICIDAD (ad generator) ================== */
@@ -1528,7 +1528,7 @@ function adZoom(delta){
 const AD_PALETTES = [
   { name:'Azul',      bg:'#F5F6F9',                                                    fg:'#15181F', brand:'#0B63CE', accent1:'#2C6BFF', accent2:'#E63888', glow1:'#4C8DFF', glow2a:'#FF9B4C', glow2b:'#FF5FA2', card:'rgba(11,20,32,.05)' },
   { name:'Nocturno',  bg:'linear-gradient(160deg,#0B0F20,#1B1042 55%,#2A0E3D)',        fg:'#F2F3F8', brand:'#7CE8F0', accent1:'#4FE0FF', accent2:'#FF6FB0', glow1:'#37E0FF', glow2a:'#B26CFF', glow2b:'#6C3FD1', card:'rgba(255,255,255,.08)' },
-  { name:'CÃ¡lido',    bg:'linear-gradient(155deg,#FFF6ED,#FFE3D0 55%,#FFD1E0)',        fg:'#2B1B14', brand:'#C24B1E', accent1:'#1E5FD9', accent2:'#FF5A5F', glow1:'#FFB84C', glow2a:'#FF6F91', glow2b:'#FF9B6A', card:'rgba(255,255,255,.55)' },
+  { name:'Cálido',    bg:'linear-gradient(155deg,#FFF6ED,#FFE3D0 55%,#FFD1E0)',        fg:'#2B1B14', brand:'#C24B1E', accent1:'#1E5FD9', accent2:'#FF5A5F', glow1:'#FFB84C', glow2a:'#FF6F91', glow2b:'#FF9B6A', card:'rgba(255,255,255,.55)' },
   { name:'Esmeralda', bg:'linear-gradient(160deg,#F1FAF5,#DFF3E8)',                    fg:'#0E2A1E', brand:'#0E8F5D', accent1:'#0E8F5D', accent2:'#D98A2B', glow1:'#34D399', glow2a:'#22C1A0', glow2b:'#0E8F5D', card:'rgba(14,42,30,.06)' },
   { name:'Magenta',   bg:'linear-gradient(160deg,#FDF3FA,#F6E4F3)',                    fg:'#2B0E22', brand:'#C2277E', accent1:'#7C3AED', accent2:'#EC297B', glow1:'#F472B6', glow2a:'#A78BFA', glow2b:'#EC297B', card:'rgba(43,14,34,.06)' },
   { name:'Monocromo', bg:'#F6F6F7',                                                    fg:'#101114', brand:'#101114', accent1:'#101114', accent2:'#55585F', glow1:'#101114', glow2a:'#55585F', glow2b:'#101114', card:'rgba(16,17,20,.06)' },
@@ -1611,7 +1611,7 @@ function adPopulateEquipos(){
   const sel = document.getElementById('adEquipoSelect');
   if (!sel) return;
   const current = sel.value;
-  sel.innerHTML = DATASET ? '<option value="">â€” Elige un equipo â€”</option>' : '<option value="">â€” Genera un reporte primero â€”</option>';
+  sel.innerHTML = DATASET ? '<option value="">— Elige un equipo —</option>' : '<option value="">— Genera un reporte primero —</option>';
   if (DATASET){
     Object.keys(DATASET.equipos).sort((a,b) => DATASET.equipos[a].n.localeCompare(DATASET.equipos[b].n)).forEach(sku => {
       const eq = DATASET.equipos[sku];
@@ -1691,10 +1691,10 @@ function adPreviewUpdate(){
   if (r.ok){
     document.getElementById('adMensualidad').textContent = Number(r.mensualidadTotal).toLocaleString('es-MX', {maximumFractionDigits:0});
     document.getElementById('adPagoInicial').textContent = Number(r.pago).toLocaleString('es-MX', {maximumFractionDigits:0});
-    document.getElementById('adPlanBadge').textContent = r.planName + ' Â· ' + r.term + ' meses';
+    document.getElementById('adPlanBadge').textContent = r.planName + ' · ' + r.term + ' meses';
   } else {
-    document.getElementById('adMensualidad').textContent = 'â€”';
-    document.getElementById('adPagoInicial').textContent = 'â€”';
+    document.getElementById('adMensualidad').textContent = '—';
+    document.getElementById('adPagoInicial').textContent = '—';
     document.getElementById('adPlanBadge').textContent = 'Selecciona equipo y plan';
   }
   banner.classList.toggle('ad-nodata', !r.ok);
@@ -1722,7 +1722,7 @@ function adPreviewUpdate(){
   }
 }
 
-/* ---- Mis diseÃ±os: guardado local por navegador (aislado por usuario/equipo) ---- */
+/* ---- Mis diseños: guardado local por navegador (aislado por usuario/equipo) ---- */
 const AD_STORAGE_KEY = 'att_publicidad_disenos_v1';
 
 function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -1739,7 +1739,7 @@ function adSetSavedDesigns(list){
 
 function adGuardarDiseno(){
   const nombre = document.getElementById('adSaveName').value.trim();
-  if (!nombre){ alert('Ponle un nombre al diseÃ±o antes de guardarlo.'); return; }
+  if (!nombre){ alert('Ponle un nombre al diseño antes de guardarlo.'); return; }
   const equipoSel = document.getElementById('adEquipoSelect');
   const snapshot = {
     id: 'd' + Date.now(),
@@ -1778,15 +1778,15 @@ function adRenderSavedDesigns(){
   if (!wrap) return;
   const list = adGetSavedDesigns();
   if (!list.length){
-    wrap.innerHTML = '<div class="empty">AÃºn no has guardado ningÃºn diseÃ±o en este navegador.</div>';
+    wrap.innerHTML = '<div class="empty">Aún no has guardado ningún diseño en este navegador.</div>';
     return;
   }
   wrap.innerHTML = list.map(d =>
     '<div class="ad-saved-item">'
-    + '<div class="ad-saved-info"><b>' + escHtml(d.nombre) + '</b><span class="diff">' + escHtml(d.equipoNombre) + ' Â· ' + escHtml(d.fecha) + '</span></div>'
+    + '<div class="ad-saved-info"><b>' + escHtml(d.nombre) + '</b><span class="diff">' + escHtml(d.equipoNombre) + ' · ' + escHtml(d.fecha) + '</span></div>'
     + '<div class="ad-saved-actions">'
     + '<button type="button" class="secondary" onclick="adCargarDiseno(\'' + d.id + '\')">Cargar</button>'
-    + '<button type="button" class="secondary" onclick="adEliminarDiseno(\'' + d.id + '\')">ðŸ—‘</button>'
+    + '<button type="button" class="secondary" onclick="adEliminarDiseno(\'' + d.id + '\')">🗑</button>'
     + '</div></div>'
   ).join('');
 }
@@ -1808,8 +1808,8 @@ function adCargarDiseno(id){
   document.getElementById('adEjecutivo').value = d.campos.ejecutivo || '';
   document.getElementById('adTelefono').value = d.campos.telefono || '';
   document.querySelector('#adBanner .ad-h1').textContent = d.campos.headline1 || 'LO NUEVO';
-  document.querySelector('#adBanner .ad-h2').textContent = d.campos.headline2 || 'YA ESTÃ AQUÃ';
-  document.querySelector('#adBanner .ad-disclaimer').textContent = d.campos.disclaimer || 'Sujeto a aprobaciÃ³n de crÃ©dito.';
+  document.querySelector('#adBanner .ad-h2').textContent = d.campos.headline2 || 'YA ESTÁ AQUÍ';
+  document.querySelector('#adBanner .ad-disclaimer').textContent = d.campos.disclaimer || 'Sujeto a aprobación de crédito.';
   adMarkActive('adCompPicker', AD_STATE.comp);
   adMarkActive('adPalettePicker', AD_STATE.palette);
   adMarkActive('adGradPicker', AD_STATE.grad);
@@ -1819,7 +1819,7 @@ function adCargarDiseno(id){
 }
 
 function adEliminarDiseno(id){
-  if (!confirm('Â¿Eliminar este diseÃ±o guardado? No se puede deshacer.')) return;
+  if (!confirm('¿Eliminar este diseño guardado? No se puede deshacer.')) return;
   adSetSavedDesigns(adGetSavedDesigns().filter(x => x.id !== id));
   adRenderSavedDesigns();
 }
