@@ -1015,7 +1015,8 @@ async function procesar(){
 
     if (REPORTE_DOC){
       log('Sincronizando con la nube...');
-      REPORTE_DOC.set({ equipos, combos, actualizadoEn: firebase.firestore.FieldValue.serverTimestamp() })
+      const combosParaNube = combos.map(function(c){ return { sku: c[0], code: c[1], term: c[2], val: c[3] }; });
+      REPORTE_DOC.set({ equipos: equipos, combos: combosParaNube, actualizadoEn: firebase.firestore.FieldValue.serverTimestamp() })
         .then(function(){ log('Reporte sincronizado — ya está disponible para otros dispositivos que abran este link.', 'ok'); })
         .catch(function(err){ log('No se pudo sincronizar con la nube (' + err.message + '). El reporte sigue funcionando en este dispositivo.', 'warn'); });
     }
@@ -1881,7 +1882,8 @@ function iniciarSincronizacionNube(){
     if (!doc.exists){ cloudSyncPrimed = true; return; }
     const data = doc.data();
     if (!data || !data.equipos || !data.combos){ cloudSyncPrimed = true; return; }
-    DATASET = { equipos: data.equipos, combos: data.combos };
+    const combosLocales = data.combos.map(function(c){ return [c.sku, c.code, c.term, c.val]; });
+    DATASET = { equipos: data.equipos, combos: combosLocales };
     renderReporte(DATASET);
     adPopulateEquipos();
     document.getElementById('simPanel').style.display = 'block';
