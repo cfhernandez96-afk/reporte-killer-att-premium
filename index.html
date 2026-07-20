@@ -7,6 +7,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
@@ -679,6 +681,27 @@ const PLAN_ORDER = ['AZ1','AZ2','AZ3','PLA','ORO','BLK','PLT','DIA'];
 
 let DATASET = null; // { equipos: {sku: {...}}, combos: [[sku,plan,term,promo]] }
 
+/* ================== SINCRONIZACIÓN EN LA NUBE (Firestore) ================== */
+/* Comparte el reporte generado entre todos los dispositivos que abran este link.
+   Si Firebase no carga (sin internet, CDN caído, etc.) la app sigue funcionando
+   100% local, solo sin compartir entre equipos. */
+let db = null, REPORTE_DOC = null;
+try {
+  const firebaseConfig = {
+    apiKey: "AIzaSyALgHqRxa0Nd0IJy1Zaj0wQbu6rhbV1wCM",
+    authDomain: "reporte-killer-att.firebaseapp.com",
+    projectId: "reporte-killer-att",
+    storageBucket: "reporte-killer-att.firebasestorage.app",
+    messagingSenderId: "677700105848",
+    appId: "1:677700105848:web:87db7937c06de47b8b9f8d"
+  };
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.firestore();
+  REPORTE_DOC = db.collection('reportes').doc('actual');
+} catch(e){
+  console.warn('No se pudo inicializar la sincronización en la nube; la app seguirá funcionando en modo local.', e);
+}
+
 function log(msg, cls){
   const el = document.getElementById('statusLog');
   const span = document.createElement('div');
@@ -989,6 +1012,13 @@ async function procesar(){
     document.getElementById('simPanel').style.display = 'block';
     document.getElementById('downloadRow').style.display = 'flex';
     document.getElementById('footerNote').style.display = 'block';
+
+    if (REPORTE_DOC){
+      log('Sincronizando con la nube...');
+      REPORTE_DOC.set({ equipos, combos, actualizadoEn: firebase.firestore.FieldValue.serverTimestamp() })
+        .then(function(){ log('Reporte sincronizado — ya está disponible para otros dispositivos que abran este link.', 'ok'); })
+        .catch(function(err){ log('No se pudo sincronizar con la nube (' + err.message + '). El reporte sigue funcionando en este dispositivo.', 'warn'); });
+    }
 
   } catch(e){
     log('Error: ' + e.message, 'err');
@@ -1842,6 +1872,28 @@ function adDescargarImagen(){
     dlBtn.disabled = false; dlBtn.textContent = 'Descargar imagen (PNG)';
   });
 }
+
+/* ---- Escucha en vivo: si otro dispositivo genera/actualiza el reporte, esta pestaña se actualiza sola ---- */
+let cloudSyncPrimed = false;
+function iniciarSincronizacionNube(){
+  if (!REPORTE_DOC) return;
+  REPORTE_DOC.onSnapshot(function(doc){
+    if (!doc.exists){ cloudSyncPrimed = true; return; }
+    const data = doc.data();
+    if (!data || !data.equipos || !data.combos){ cloudSyncPrimed = true; return; }
+    DATASET = { equipos: data.equipos, combos: data.combos };
+    renderReporte(DATASET);
+    adPopulateEquipos();
+    document.getElementById('simPanel').style.display = 'block';
+    document.getElementById('downloadRow').style.display = 'flex';
+    document.getElementById('footerNote').style.display = 'block';
+    log(cloudSyncPrimed ? 'El reporte compartido se actualizó (otro dispositivo generó una nueva versión).' : 'Se cargó el reporte compartido desde la nube — generado en otro dispositivo.', 'ok');
+    cloudSyncPrimed = true;
+  }, function(err){
+    log('No se pudo conectar con la base de datos compartida: ' + err.message, 'warn');
+  });
+}
+iniciarSincronizacionNube();
 </script>
 </body>
 </html>
